@@ -12,6 +12,6 @@ int main()
     {
         cout << word << " ";
     }
-
+    printf("What a chore!!!\n");
     cout << endl;
 }

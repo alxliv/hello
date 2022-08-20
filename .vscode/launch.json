@@ -1,30 +1,11 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "C++ Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/a.out",
-            "stopAtEntry": false,
-            "customLaunchSetupCommands": [
-                {
-                    "text": "target-run",
-                    "description": "run target",
-                    "ignoreFailures": false
-                }
-            ],
-            "launchCompleteCommand": "exec-run",
-            "windows": {
-                "MIMode": "gdb",
-                "miDebuggerPath": "gdb.exe"
-            }
-        },
-        {
+    "configurations": [ 
+            {
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceRoot}/hello.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -44,7 +25,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "C/C++: g++.exe build hello.exe"
         }
     ]
 }
