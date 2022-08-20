@@ -1,4 +1,4 @@
-# IMPORTANT: always use 'Ident using tabs' when changing Makefile
+# IMPORTANT: always use 'Ident Using Tabs' when editing Makefile
 # make is very sensitive about this issue
 CC=g++
 # compiler flags:
