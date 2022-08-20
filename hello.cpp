@@ -14,6 +14,6 @@ int main()
     {
         cout << word << " ";
     }
-    printf("What a %d!!!\n", KUKU);
+    printf("What a %d!!!\n", KUKU+15);
     cout << endl;
 }

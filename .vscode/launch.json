@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [ 
             {
-            "name": "C/C++: g++.exe build and debug active file",
+            "name": "Debug EXE made in MSYS2 with make",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/hello.exe",
+            "program": "${workspaceRoot}/hellomake.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -25,7 +25,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build hello.exe"
+            "preLaunchTask": ""
         }
     ]
 }
