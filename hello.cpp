@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+#include "somedefs.h"
+
 using namespace std;
 
 int main()
@@ -12,6 +14,6 @@ int main()
     {
         cout << word << " ";
     }
-    printf("What a chore!!!\n");
+    printf("What a %d!!!\n", KUKU);
     cout << endl;
 }

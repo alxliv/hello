@@ -1,12 +1,32 @@
 CC=g++
-CFLAGS=-I. -Wall -Wextra -g3 -v
+# compiler flags:
+#  -g    adds debugging information to the executable file
+#  -Wall turns on most, but not all, compiler warnings
 
-DEPS = hellomake.h
+CFLAGS= -Iinc -Wall -Wextra -g
+$(info CFLAGS= $(CFLAGS))
+LDFLAGS=
 
-%.o: %.cpp $(DEPS)
-	$(CC) -cpp -o $@ $< $(CFLAGS)
+SOURCES=hello.cpp
 
-hellomake: hello.o 
-	$(CC) -o hellomake.exe hello.o
-	 
+srcs = $(wildcard *.cpp)
+objs = $(srcs:.cpp=.o)
+deps = $(srcs:.cpp=.d)
+$(info srcs=$(srcs))
+$(info deps=$(deps))
 
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=hellomake.exe
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CC) -MMD -MP $(CFLAGS) -c $< -o $@
+
+clean:
+	rm $(objs) $(deps)
+
+-include $(deps)
