@@ -1,1 +1,1 @@
-#define KUKU 100
+#define KUKU 200
